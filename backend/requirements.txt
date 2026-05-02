@@ -1,0 +1,28 @@
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# LiveKit Agents stack
+# Verify against SDK docs: https://docs.livekit.io/agents/
+livekit>=0.19.1
+livekit-agents==0.12.21
+livekit-plugins-openai==0.10.19
+livekit-plugins-silero==0.7.4
+livekit-plugins-deepgram==0.7.4
+livekit-plugins-cartesia==0.4.12
+
+# OpenAI SDK (used by plugin + post-call summary)
+openai==2.33.0
+
+# Storage + settings
+aiosqlite==0.20.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+
+# Security / rate limiting
+slowapi==0.1.9
+python-jose[cryptography]==3.3.0
+
+# HTTP utilities
+httpx==0.28.1

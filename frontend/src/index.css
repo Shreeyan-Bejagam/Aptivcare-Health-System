@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", system-ui, sans-serif;
+    color: theme("colors.brand.ink");
+    background-color: theme("colors.brand.bg");
+  }
+
+  body {
+    @apply min-h-screen antialiased;
+    background-color: theme("colors.brand.bg");
+    background-image: radial-gradient(
+      ellipse 100% 55% at 50% 0%,
+      rgba(255, 255, 255, 0.04),
+      transparent 50%
+    );
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  button {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-500/70;
+  }
+
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: theme("colors.brand.ink");
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    @apply bg-zinc-950/95 backdrop-blur-md ring-1 ring-zinc-800/90;
+  }
+
+  .shimmer {
+    background-image: linear-gradient(
+      90deg,
+      rgba(24, 24, 27, 0.95) 25%,
+      rgba(63, 63, 70, 0.5) 37%,
+      rgba(24, 24, 27, 0.95) 63%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.7s linear infinite;
+  }
+
+  .soft-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(63, 63, 70, 0.8) transparent;
+  }
+
+  .soft-scrollbar::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .soft-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(82, 82, 91, 0.85);
+    border-radius: 9999px;
+  }
+}
