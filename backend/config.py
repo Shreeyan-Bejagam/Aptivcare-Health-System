@@ -1,5 +1,3 @@
-"""Application configuration from environment and `.env`."""
-
 from __future__ import annotations
 
 import json
